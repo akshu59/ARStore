@@ -1,0 +1,6 @@
+com\akshu\springboot2\jpahibernate\repository\SpringJpaRepo.class
+com\akshu\springboot2\jpahibernate\CourseRestController.class
+com\akshu\springboot2\jpahibernate\repository\CommandLineRunnerRepo.class
+com\akshu\springboot2\jpahibernate\repository\JDBCSpringCRUDRepo.class
+com\akshu\springboot2\jpahibernate\pojo\Course.class
+com\akshu\springboot2\jpahibernate\JpaHibernateApplication.class

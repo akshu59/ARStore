@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.akshu.springboot2.jpahibernate.JpaHibernateApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.05 s -- in com.akshu.springboot2.jpahibernate.JpaHibernateApplicationTests
