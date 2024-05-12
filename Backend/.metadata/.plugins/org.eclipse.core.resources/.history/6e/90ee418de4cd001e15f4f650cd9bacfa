@@ -1,0 +1,22 @@
+#spring.h2.console.enabled=true
+##spring.datasource.url=jdbc:h2:mem:testdb
+#spring.jpa.hibernate.ddl-auto=update
+#spring.datasource.url=jdbc:mysql://localhost:8086/courses
+#spring.datasource.username=myself
+#spring.datasourse.password=87654321
+
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://localhost:8085/courses
+spring.datasource.username=myself
+spring.datasource.password=87654321
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+
+management.endpoints.web.exposure.include=*
+management.info.env.enabled=true
+info.app.name=My APP
+info.app.description=this is description
+info.app.author=Akshay
+info.app.version=1.0.0
+
+spring.security.user.user=Akshay
+spring.security.user.passsword=pwd12345

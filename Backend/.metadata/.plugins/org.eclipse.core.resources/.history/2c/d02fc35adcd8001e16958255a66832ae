@@ -1,0 +1,51 @@
+package com.akshu.springboot2.jpahibernate;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.akshu.springboot2.jpahibernate.pojo.Product;
+import com.akshu.springboot2.jpahibernate.repository.SpringJpaRepo;
+
+import jakarta.annotation.PostConstruct;
+
+@RestController
+@RequestMapping("/product")
+public class ProductRestController {
+
+	@Autowired
+	private SpringJpaRepo springJpaRepo;
+
+	@GetMapping("/")
+	public ResponseEntity<Map<String, Object>> getAll() {
+		List<Product> list = springJpaRepo.findAll();
+
+		return ResponseEntity.ok(Map.of("data", list));
+	}
+
+	@GetMapping("/{id}")
+	public Product getOne(@PathVariable Long id) {
+		return springJpaRepo.findById(id).get();
+	}
+
+	@GetMapping("/{productId}")
+	public ResponseEntity<Map<String, Object>> getOne(@PathVariable String productId) {
+		return ResponseEntity.ok(Map.of("data", springJpaRepo.findByProductId(productId)));
+	}
+
+	@PostMapping("/product")
+	public void save(@RequestBody Product course) {
+		springJpaRepo.save(course);
+	}
+
+}

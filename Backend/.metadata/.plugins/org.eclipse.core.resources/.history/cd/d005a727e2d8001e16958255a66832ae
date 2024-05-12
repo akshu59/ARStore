@@ -1,0 +1,13 @@
+package com.akshu.springboot2.jpahibernate.repository;
+
+import java.util.Map;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.http.ResponseEntity;
+
+import com.akshu.springboot2.jpahibernate.pojo.Product;
+
+public interface SpringJpaRepo extends JpaRepository<Product, Long> {
+
+	public ResponseEntity<Map<String,Object>> findByProductId(String productId);
+}
